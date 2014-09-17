@@ -3,6 +3,7 @@
 PointLocationChecker::PointLocation PointLocationChecker::checkPoint(Point& p) {
     int parity = 0;
     int currentEdgeNum = 0;
+
     while(currentEdgeNum < polygon.size() - 1) {
 
         Polygon::Edge currentEdge = polygon.getEdge(currentEdgeNum);

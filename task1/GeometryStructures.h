@@ -8,11 +8,11 @@
 using std::vector;
 
 struct Point {
-    int x;
-    int y;
+    long int x;
+    long int y;
     enum class PointType {LEFT, RIGHT, AHEAD, BEHIND, BETWEEN, START, END};
 
-    Point(int x, int y) : x(x), y(y) {}
+    Point(long int x, long int y) : x(x), y(y) {}
     Point operator+(Point& p) {
         return Point(x + p.x, y + p.y);
     }

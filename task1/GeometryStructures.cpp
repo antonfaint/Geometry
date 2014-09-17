@@ -4,7 +4,7 @@ Point::PointType Point::classify(Point &p1, Point &p2) {
     Point a = p2 - p1;
     Point b = *this - p1;
 
-    int s = a.x * b.y - b.x * a.y;
+    long long int s = a.x * b.y - b.x * a.y;
     if (s < 0) {
         return PointType::LEFT;
     }
