@@ -8,6 +8,7 @@ using std::cout;
 using std::endl;
 using std::vector;
 
+
 int main() {
     int n = 0;
     int m = 0;
@@ -16,9 +17,10 @@ int main() {
     vector<Point> vertexList;
 
     for (int i = 0; i < n; ++i) {
-        long int x = 0;
-        long int y = 0;
-        cin>> x >> y;
+        long int x = 0, y = 0;
+        char c1, c2, c3;
+        cin>>c1 >> x >> c2 >> y >> c3;
+
         vertexList.push_back(Point(x,y));
     }
 
@@ -28,18 +30,19 @@ int main() {
     cin>> m;
 
     for (int j = 0; j < m; ++j) {
-        long int x = 0;
-        long int y = 0;
-        cin>> x >> y;
+        long int x = 0, y = 0;
+        char c1, c2, c3;
+        cin>>c1 >> x >> c2 >> y >> c3;
+
         Point currentPoint(x,y);
 
         try {
             switch (checker.checkPoint(currentPoint)) {
                 case PointLocationChecker::PointLocation::INSIDE :
-                    cout<< "YES"<< endl;
+                    cout<< "yes"<< endl;
                     break;
                 default:
-                    cout<< "NO"<< endl;
+                    cout<< "no"<< endl;
                     break;
             }
         } catch (std::runtime_error const e){
